@@ -101,10 +101,11 @@
       border-right: 1px solid #ddd;
     }
     .flap-in {
-      padding: 38px 26px 26px;
+      padding: 22px 24px 20px;  /* reduced: was 38/26/26, saving 32px */
       height: 100%;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
     .flap-eyebrow {
       font-family: var(--sans);
@@ -117,16 +118,16 @@
     }
     .flap-headline {
       font-family: var(--serif);
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 500;
       color: var(--blue);
       line-height: 1.2;
-      margin-bottom: 22px;
+      margin-bottom: 14px;  /* was 22px */
     }
     .pain {
       border-left: 5px solid var(--red);
-      padding: 12px 16px;
-      margin-bottom: 14px;
+      padding: 10px 14px;   /* was 12/16 */
+      margin-bottom: 9px;   /* was 14px */
       background: var(--lt-grey);
       border-radius: 0 6px 6px 0;
     }
@@ -227,9 +228,10 @@
     }
     .cover-in {
       position: relative; z-index: 2;
-      padding: 32px 26px 26px;
+      padding: 20px 24px 18px;  /* reduced: was 32/26/26, saves ~27px */
       height: 100%;
       display: flex; flex-direction: column; justify-content: space-between;
+      overflow: hidden;
     }
 
     /* v10: Larger, fully legible badge */
@@ -248,9 +250,9 @@
     }
     /* v10: Larger logo */
     .cover-logo {
-      height: 36px;
+      height: 32px;
       width: auto;
-      margin-bottom: 20px;
+      margin-bottom: 12px;  /* was 20px */
       filter: brightness(0) invert(1);
     }
     .cover-h1 {
@@ -274,7 +276,7 @@
     /* v10: Programs section replaces event card */
     .cover-programs-section {
       border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 18px;
+      padding-top: 12px;  /* was 18px */
     }
     .cover-prog-eyebrow {
       font-family: var(--sans);
@@ -283,14 +285,14 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 14px;
+      margin-bottom: 8px;  /* was 14px */
     }
     .cover-prog-item {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       align-items: flex-start;
-      margin-bottom: 12px;
-      padding-bottom: 12px;
+      margin-bottom: 8px;   /* was 12px */
+      padding-bottom: 8px;  /* was 12px */
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .cover-prog-item:last-child { border-bottom: none; margin-bottom: 0; }
@@ -337,24 +339,24 @@
       border-right: 1px solid #e8e8e8;
     }
     .plan-in {
-      padding: 18px 16px 12px;
+      padding: 14px 14px 10px;  /* tightest safe padding */
       height: 100%;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
-    .plan-eyebrow { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-    .plan-title { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 4px; }
-    .plan-sub { font-family: var(--serif); font-style: italic; font-size: 11.5px; color: var(--grey); margin-bottom: 10px; }
+    .plan-eyebrow { font-family: var(--sans); font-size: 8.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .plan-title { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 3px; }
+    .plan-sub { font-family: var(--serif); font-style: italic; font-size: 11px; color: var(--grey); margin-bottom: 8px; }
 
-    .steps { display: flex; gap: 5px; margin-bottom: 10px; }
-    .step { flex: 1; background: var(--lt-grey); border-radius: 5px; padding: 9px 6px; text-align: center; position: relative; }
+    .steps { display: flex; gap: 4px; margin-bottom: 8px; }
+    .step { flex: 1; background: var(--lt-grey); border-radius: 5px; padding: 7px 5px; text-align: center; position: relative; }
     .step + .step::before { content: '\2014'; position: absolute; left: -7px; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 9px; }
     .step-n { font-family: var(--serif); font-size: 22px; color: var(--gold); line-height: 1; }
     .step-lbl { font-family: var(--sans); font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--blue); margin-top: 3px; }
     .step-d { font-size: 8px; color: var(--grey); margin-top: 3px; line-height: 1.4; }
 
-    .sec-break { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+    .sec-break { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
     .sec-break .bar { flex: 1; height: 1px; background: var(--lt-grey); }
     .sec-break .tag { font-size: 7.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
 
@@ -363,23 +365,24 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, 1fr);
-      gap: 6px;
-      flex: 1;       /* stretch to fill available vertical space */
-      min-height: 0; /* required for flex children to shrink */
+      gap: 5px;
+      flex: 1;
+      min-height: 0;
     }
     .prog {
       background: var(--lt-grey);
-      border-radius: 5px;
-      padding: 10px 12px;
+      border-radius: 4px;
+      padding: 7px 9px;   /* tighter padding per card */
       border-top: 3px solid var(--blue);
       display: flex;
       flex-direction: column;
+      min-height: 0;
     }
-    .prog h4 { font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
-    .prog p { font-size: 10.5px; color: var(--grey); line-height: 1.5; flex: 1; }
-    .prog .fed { font-size: 9px; color: var(--orange); font-style: italic; margin-top: 4px; }
+    .prog h4 { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 3px; }
+    .prog p { font-size: 9.5px; color: var(--grey); line-height: 1.4; flex: 1; min-height: 0; overflow: hidden; }
+    .prog .fed { font-size: 8px; color: var(--orange); font-style: italic; margin-top: 2px; flex-shrink: 0; }
 
-    .plan-foot { padding-top: 10px; border-top: 1px solid var(--lt-grey); text-align: center; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--grey); flex-shrink: 0; }
+    .plan-foot { padding-top: 6px; border-top: 1px solid var(--lt-grey); text-align: center; font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--grey); flex-shrink: 0; }
 
     /* ── INSIDE CENTER — VILLAIN FIRST ── */
     .p-villain {
