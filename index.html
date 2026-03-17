@@ -337,10 +337,11 @@
       border-right: 1px solid #e8e8e8;
     }
     .plan-in {
-      padding: 22px 18px 14px;
+      padding: 18px 16px 12px;
       height: 100%;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
     .plan-eyebrow { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
     .plan-title { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--blue); line-height: 1.2; margin-bottom: 4px; }
@@ -388,10 +389,11 @@
       background: var(--white);
     }
     .villain-in {
-      padding: 18px 20px 16px;  /* reduced top padding — prevents cutoff */
+      padding: 18px 18px 14px;
       height: 100%;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
 
     .villain-eyebrow { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--red); margin-bottom: 5px; }
@@ -541,52 +543,77 @@
     .s-mark { flex-shrink: 0; width: 17px; height: 17px; border-radius: 50%; background: rgba(197,165,90,0.22); color: var(--gold-lt); font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
 
     /* Lead magnet CTA — transparent, same navy background */
+    /* ── Panel 4 CTA bottom section — clean unified block ── */
     .cta-download {
       flex: 1;
       background: transparent;
-      padding: 12px 20px 18px;
+      padding: 10px 22px 20px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 10px;
     }
 
-    /* Gold rule separator — subtle, no hard line */
     .cta-divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,165,90,0.4), transparent);
-      margin: 0 20px 12px;
+      background: linear-gradient(90deg, transparent, rgba(197,165,90,0.35), transparent);
+      margin: 0;
+      flex-shrink: 0;
     }
 
-    .dl-eyebrow { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 8px; }
-    .dl-title { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--white); text-align: center; line-height: 1.3; margin-bottom: 12px; }
-
-    /* QR + URL centered block */
-    .dl-qr-wrap {
-      text-align: center;
-      margin-bottom: 12px;
+    .dl-eyebrow {
+      font-family: var(--sans);
+      font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); text-align: center;
     }
-    .dl-qr-img {
-      width: 90px; height: 90px;
-      border-radius: 6px;
-      display: block;
-      margin: 0 auto 8px;
+    .dl-title {
+      font-family: var(--serif);
+      font-size: 18px; font-weight: 500; color: var(--white);
+      text-align: center; line-height: 1.3;
     }
-    .dl-url { font-family: var(--sans); font-size: 12px; font-weight: 600; color: var(--gold); }
 
-    /* Action paths — full-width, consistent center alignment */
-    .dl-path {
+    /* QR + URL side-by-side with phone — clean single block */
+    .dl-action-block {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-bottom: 8px;
-      width: 100%;
-      text-align: center;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-    .dl-path-lbl { font-family: var(--sans); font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
-    .dl-path-val { font-size: 15px; font-weight: 700; color: var(--white); }
+    .dl-qr-img {
+      width: 80px; height: 80px;
+      border-radius: 5px;
+      flex-shrink: 0;
+      display: block;
+    }
+    .dl-action-text { flex: 1; }
+    .dl-action-label {
+      font-family: var(--sans);
+      font-size: 7.5px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
+    }
+    .dl-url {
+      font-family: var(--sans);
+      font-size: 11px; font-weight: 600; color: var(--white);
+      margin-bottom: 10px; display: block;
+    }
+    .dl-phone-label {
+      font-family: var(--sans);
+      font-size: 7.5px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
+    }
+    .dl-phone-val {
+      font-family: var(--sans);
+      font-size: 17px; font-weight: 700; color: var(--white);
+    }
 
-    .dl-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 10px; }
+    .dl-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 10px;
+      margin-top: auto;
+    }
     .dl-logo { height: 22px; width: auto; filter: brightness(0) invert(1); opacity: 0.4; margin-bottom: 3px; }
     .dl-fid { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--gold); }
 
@@ -981,25 +1008,20 @@
 
     <!-- Free download CTA -->
     <div class="cta-download">
-      <div>
-        <div class="dl-eyebrow">Free Download</div>
-        <div class="dl-title">The Federal Employees&rsquo; Retirement Readiness Guide</div>
-      </div>
-      <div class="dl-qr-wrap">
-        <!-- Real scannable QR code — points to capitalwealth.com/federal-guide -->
-        <img src="assets/qr-federal-guide.png" alt="Scan to download guide" class="dl-qr-img">
-        <div class="dl-url">capitalwealth.com/federal-guide</div>
-      </div>
-      <div>
-        <div class="dl-path">
-          <div class="dl-path-lbl">Call Us Directly</div>
-          <div class="dl-path-val">801.210.2800</div>
-        </div>
-        <div class="dl-path">
-          <div class="dl-path-lbl">Free Assessment</div>
-          <div class="dl-path-val">capitalwealth.com/federal</div>
+      <div class="dl-eyebrow">Free Download</div>
+      <div class="dl-title">The Federal Employees&rsquo; Retirement Readiness Guide</div>
+
+      <!-- QR + URL + Phone in one clean block -->
+      <div class="dl-action-block">
+        <img src="assets/qr-federal-guide.png" alt="Scan to download" class="dl-qr-img">
+        <div class="dl-action-text">
+          <div class="dl-action-label">Scan to Download</div>
+          <div class="dl-url">capitalwealth.com<br>/federal-guide</div>
+          <div class="dl-phone-label">Call Us Directly</div>
+          <div class="dl-phone-val">801.210.2800</div>
         </div>
       </div>
+
       <div class="dl-bottom">
         <img src="assets/cw-logo-white.png" alt="Capital Wealth" class="dl-logo">
         <div class="dl-fid">Fiduciary. Always.</div>
