@@ -504,7 +504,7 @@
     /* Family photo at top */
     .cta-photo {
       position: relative;
-      height: 1.55in;    /* was 2.2in — reduced by 0.65in (~62px) */
+      height: 2.0in;
       flex-shrink: 0;
       overflow: hidden;
     }
@@ -546,14 +546,14 @@
     .s-mark { flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%; background: rgba(197,165,90,0.22); color: var(--gold-lt); font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
 
     /* Lead magnet CTA — transparent, same navy background */
-    /* ── Panel 4 CTA bottom section — clean unified block ── */
+    /* ── Panel 4 CTA bottom section — space-between fills the panel evenly ── */
     .cta-download {
       flex: 1;
       background: transparent;
-      padding: 8px 18px 14px;
+      padding: 10px 18px 16px;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      justify-content: space-between;  /* spreads content top-to-bottom, no dead gap */
       min-height: 0;
     }
 
