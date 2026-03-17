@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Wealth — Federal Benefits Trifold v9</title>
+  <style>
+    /*
+      CAPITAL WEALTH — v9
+      LARGE PRINT. SENIOR AUDIENCE. BILLBOARD CLARITY.
+      One idea per block. Massive type. Generous white space.
+      Brand: #194F90 blue | #F09F54 orange | #7b868C grey
+      Serif: Cormorant Garamond | Sans: Inter
+      NO EMOJIS. NO CLUTTER.
+    */
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --blue:      #194F90;
+      --blue-dk:   #0F3460;
+      --blue-deep: #081e3f;
+      --orange:    #F09F54;
+      --grey:      #7b868C;
+      --lt-grey:   #f0f1f3;
+      --white:     #FFFFFF;
+      --cream:     #FAF8F3;
+      --red:       #B22234;
+      --gold:      #C5A55A;
+      --gold-lt:   #D4BA78;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'Inter', -apple-system, system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #aaa;
+      font-family: var(--sans);
+      padding: 40px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .proof-label {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .proof-label strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #222;
+    }
+    .proof-label span {
+      font-size: 10px;
+      color: #777;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .spread {
+      display: flex;
+      width: 11in;
+      height: 8.5in;
+      margin: 0 auto 60px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+    }
+
+    .panel {
+      width: 3.667in;
+      height: 8.5in;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* Patriotic stripe — thicker in v9 */
+    .stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg,
+        var(--red)   0%   33.3%,
+        var(--white) 33.3% 66.6%,
+        var(--blue)  66.6% 100%
+      );
+      z-index: 10;
+    }
+
+    /* Gold rule */
+    .rule-gold {
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--gold), rgba(197,165,90,0.1));
+      margin: 18px 0;
+    }
+
+    /* =====================================================
+       OUTSIDE SPREAD
+    ===================================================== */
+
+    /* ── INSIDE FLAP (outside-left) ── */
+    .p-flap {
+      background: var(--white);
+      border-right: 1px solid #ddd;
+    }
+    .flap-in {
+      padding: 38px 26px 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .flap-eyebrow {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .flap-headline {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--blue);
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    /* Each pain point — BIG, spaced, scannable */
+    .pain {
+      border-left: 5px solid var(--red);
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      background: var(--lt-grey);
+      border-radius: 0 6px 6px 0;
+    }
+    .pain-q {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--blue);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .pain-a {
+      font-size: 12px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+    .pain-a strong { color: var(--red); font-weight: 600; }
+
+    .flap-close {
+      margin-top: auto;
+      border-top: 1px solid var(--lt-grey);
+      padding-top: 16px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--blue);
+      line-height: 1.65;
+    }
+    .flap-close strong { font-style: normal; font-weight: 600; }
+
+    /* ── BACK COVER (outside-center) ── */
+    .p-back {
+      background: var(--cream);
+      border-right: 1px solid #ddd;
+    }
+    .back-in {
+      padding: 32px 24px 22px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Seal */
+    .seal {
+      width: 96px; height: 96px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .seal .micro {
+      font-size: 6px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      position: absolute;
+    }
+    .seal .micro.t { top: 10px; }
+    .seal .micro.b { bottom: 10px; }
+    .seal-name {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .about {
+      font-size: 12px;
+      color: #333;
+      line-height: 1.75;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .about strong { color: var(--blue); }
+
+    /* Large stat lines */
+    .stat {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      align-items: flex-start;
+    }
+    .stat-dash { font-size: 16px; color: var(--gold); line-height: 1.2; flex-shrink: 0; }
+    .stat p { font-size: 12px; color: #333; line-height: 1.5; }
+    .stat p strong { color: var(--blue); }
+
+    /* Big proof numbers */
+    .nums {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .num-block {
+      background: var(--white);
+      border: 1px solid #e0dbd2;
+      border-radius: 6px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+    .num-val {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .num-lbl {
+      font-size: 8.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--grey);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .testimonial {
+      border-left: 5px solid var(--red);
+      background: rgba(178,34,52,0.04);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 14px;
+    }
+    .testimonial p {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 11.5px;
+      color: #333;
+      line-height: 1.7;
+    }
+    .testimonial .att {
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-top: 8px;
+    }
+
+    .back-foot {
+      border-top: 1px solid #ddd;
+      padding-top: 12px;
+      text-align: center;
+      font-size: 10.5px;
+      color: var(--grey);
+      line-height: 1.9;
+    }
+    .back-foot a { color: var(--blue); text-decoration: none; }
+    .back-fid {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--gold);
+      margin-top: 4px;
+    }
+
+    /* ── FRONT COVER (outside-right) ── */
+    .p-cover {
+      position: relative;
+      overflow: hidden;
+      background: var(--blue-deep);
+      color: var(--white);
+    }
+    .cover-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/capitol-golden.jpg');
+      background-size: cover;
+      background-position: center 35%;
+      z-index: 0;
+    }
+    .cover-veil {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(8,30,63,0.25) 0%,
+        rgba(8,30,63,0.50) 28%,
+        rgba(8,30,63,0.88) 58%,
+        rgba(8,30,63,0.98) 80%,
+        rgba(8,30,63,1.00) 100%
+      );
+      z-index: 1;
+    }
+    .cover-in {
+      position: relative;
+      z-index: 2;
+      padding: 36px 28px 26px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cover-badge {
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .cover-logo {
+      height: 28px;
+      width: auto;
+      margin: 14px 0 20px;
+      filter: brightness(0) invert(1);
+    }
+    .cover-h1 {
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .cover-h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+      color: var(--gold-lt);
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+    .cover-programs {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 5px;
+    }
+    .cover-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .ev-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-top: 18px;
+    }
+    .ev-lbl {
+      font-size: 8.5px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .ev-line {
+      font-size: 12px;
+      color: rgba(255,255,255,0.88);
+      line-height: 2.1;
+    }
+    .ev-line strong { color: var(--white); }
+    .sf182 {
+      display: inline-block;
+      margin-top: 10px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+
+    .cover-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 16px;
+    }
+    .qr-wrap { text-align: center; }
+    .qr-box {
+      width: 68px; height: 68px;
+      background: var(--white);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .qr-box::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      background:
+        linear-gradient(90deg, var(--blue) 2px, transparent 2px) 0 0 / 6px 6px,
+        linear-gradient(0deg, var(--blue) 2px, transparent 2px) 0 0 / 6px 6px;
+      opacity: 0.4;
+    }
+    .qr-lbl { font-size: 9px; color: rgba(255,255,255,0.45); }
+    .qr-url { font-size: 9.5px; color: var(--gold); font-weight: 500; }
+    .cover-contact { text-align: right; }
+    .cover-web { font-size: 10px; color: rgba(255,255,255,0.4); }
+    .cover-phone { font-size: 15px; font-weight: 700; color: var(--white); margin-top: 3px; }
+
+    /* =====================================================
+       INSIDE SPREAD
+    ===================================================== */
+
+    /* ── INSIDE LEFT — Programs ── */
+    .p-plan {
+      background: var(--white);
+      border-right: 1px solid #e8e8e8;
+    }
+    .plan-in {
+      padding: 30px 22px 18px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-eyebrow {
+      font-family: var(--sans);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .plan-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--blue);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .plan-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--grey);
+      margin-bottom: 16px;
+    }
+
+    /* 3 steps — BIG and clear */
+    .steps {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .step {
+      flex: 1;
+      background: var(--lt-grey);
+      border-radius: 6px;
+      padding: 12px 8px;
+      text-align: center;
+      position: relative;
+    }
+    .step + .step::before {
+      content: '\2014';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 10px;
+    }
+    .step-n {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .step-lbl {
+      font-family: var(--sans);
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--blue);
+      margin-top: 4px;
+    }
+    .step-d {
+      font-size: 9px;
+      color: var(--grey);
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    .sec-break {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .sec-break .bar { flex: 1; height: 1px; background: var(--lt-grey); }
+    .sec-break .tag {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    /* Programs — 2-col grid, LARGE text */
+    .prog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+    .prog {
+      background: var(--lt-grey);
+      border-radius: 6px;
+      padding: 10px 12px;
+      border-top: 3px solid var(--blue);
+    }
+    .prog h4 {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .prog p {
+      font-size: 10px;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+    .prog .fed {
+      font-size: 9px;
+      color: var(--orange);
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    .plan-foot {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--lt-grey);
+      text-align: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: var(--grey);
+    }
+
+    /* ── INSIDE CENTER — Family Photo + Compare ── */
+    .p-cmp {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #e8e8e8;
+    }
+
+    /* Family photo — top third */
+    .cmp-photo {
+      position: relative;
+      height: 2.5in;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .cmp-photo-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/family-flag.jpg');
+      background-size: cover;
+      background-position: center 25%;
+    }
+    .cmp-photo-fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 70px;
+      background: linear-gradient(180deg, transparent 0%, var(--blue) 100%);
+    }
+    .cmp-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 0; right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    .cmp-caption span {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13px;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+    }
+
+    /* Success panel */
+    .cmp-top {
+      background: linear-gradient(170deg, var(--blue) 0%, var(--blue-dk) 100%);
+      padding: 18px 20px 14px;
+      display: flex;
+      flex-direction: column;
+      color: var(--white);
+    }
+    /* Failure panel */
+    .cmp-bot {
+      flex: 1;
+      background: #f0ede8;
+      padding: 16px 20px 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cmp-stars { font-size: 9px; letter-spacing: 10px; color: var(--gold); margin-bottom: 8px; }
+
+    .cmp-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .cmp-top .cmp-title { color: var(--white); }
+    .cmp-bot .cmp-title { color: #999; font-weight: 400; }
+
+    /* BIG check items */
+    .cmp-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 7px;
+      font-size: 11.5px;
+      line-height: 1.6;
+      align-items: flex-start;
+    }
+    .mark {
+      flex-shrink: 0;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      font-size: 9px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .m-yes { background: rgba(197,165,90,0.22); color: var(--gold-lt); }
+    .m-no  { background: rgba(0,0,0,0.07); color: #bbb; }
+
+    .cmp-foot {
+      margin-top: auto;
+      padding-top: 10px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+    .cmp-top .cmp-foot { border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+    .cmp-bot .cmp-foot { border-top: 1px solid #ddd; color: #aaa; }
+
+    /* ── INSIDE RIGHT — CTA ── */
+    .p-cta {
+      position: relative;
+      overflow: hidden;
+      background: var(--blue-deep);
+      color: var(--white);
+    }
+    .cta-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/capitol-golden.jpg');
+      background-size: cover;
+      background-position: center 60%;
+      z-index: 0;
+    }
+    .cta-veil {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,30,63,0.93);
+      z-index: 1;
+    }
+    .cta-in {
+      position: relative;
+      z-index: 2;
+      padding: 28px 24px 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cta-stars { text-align: center; font-size: 9px; letter-spacing: 10px; color: var(--gold); margin-bottom: 10px; }
+    .cta-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .cta-sub {
+      text-align: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12px;
+      color: rgba(255,255,255,0.42);
+      margin-bottom: 14px;
+    }
+
+    /* Lead magnet — PRIMARY */
+    .lead {
+      background: rgba(197,165,90,0.1);
+      border: 1px solid rgba(197,165,90,0.3);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .lead-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue-deep);
+      font-family: var(--sans);
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 10px;
+    }
+    .lead-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .lead-desc {
+      font-size: 10.5px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .lead-qr {
+      width: 72px; height: 72px;
+      background: var(--white);
+      border-radius: 6px;
+      margin: 0 auto 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .lead-qr::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      background:
+        linear-gradient(90deg, var(--blue) 2px, transparent 2px) 0 0 / 6px 6px,
+        linear-gradient(0deg, var(--blue) 2px, transparent 2px) 0 0 / 6px 6px;
+      opacity: 0.42;
+    }
+    .lead-url {
+      font-family: var(--sans);
+      font-size: 9.5px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Assessment secondary */
+    .assess-lbl {
+      font-family: var(--sans);
+      font-size: 7.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .assess-title {
+      font-family: var(--serif);
+      font-size: 16px;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .assess-sub {
+      text-align: center;
+      font-size: 10px;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 10px;
+    }
+
+    /* What we cover — 2-col, large */
+    .covers {
+      list-style: none;
+      columns: 2;
+      column-gap: 8px;
+      margin-bottom: 10px;
+    }
+    .covers li {
+      font-size: 10.5px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 3px;
+      break-inside: avoid;
+    }
+    .arr { color: var(--gold); margin-right: 3px; font-size: 11px; }
+
+    /* Action paths */
+    .path {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 6px;
+      padding: 11px 14px;
+      margin-bottom: 6px;
+    }
+    .path-lbl {
+      font-family: var(--sans);
+      font-size: 7.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2px;
+    }
+    .path-val {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .path-det {
+      font-size: 9.5px;
+      color: rgba(255,255,255,0.38);
+      margin-top: 2px;
+    }
+
+    .scarcity {
+      text-align: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 10px;
+      line-height: 1.55;
+    }
+    .scarcity strong { color: var(--gold); font-style: normal; }
+
+    .cta-bot {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 10px;
+    }
+    .cta-logo {
+      height: 20px; width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.45;
+      margin-bottom: 3px;
+    }
+    .cta-fid {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 11px;
+      color: var(--gold);
+    }
+    .cta-legal {
+      font-size: 6px;
+      color: rgba(255,255,255,0.18);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .proof-label { display: none; }
+      .spread { box-shadow: none; page-break-after: always; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =====================================================
+     OUTSIDE SPREAD
+===================================================== -->
+<div class="proof-label">
+  <strong>Capital Wealth &mdash; Federal Benefits Trifold v9</strong>
+  <span>Outside Spread</span>
+</div>
+
+<div class="spread">
+
+  <!-- INSIDE FLAP — outside-left -->
+  <div class="panel p-flap">
+    <div class="stripe"></div>
+    <div class="flap-in">
+
+      <div class="flap-eyebrow">Does This Sound Familiar?</div>
+      <div class="flap-headline">You Have Spent Decades Earning These Benefits.<br>Does Anyone Know How They Fit Together?</div>
+
+      <div class="pain">
+        <div class="pain-q">&ldquo;I have looked at my FERS estimate for years. I am not sure it is right.&rdquo;</div>
+        <div class="pain-a">Most employees are off by <strong>$200&ndash;400 per month.</strong> That is $4,800 per year planned around the wrong number.</div>
+      </div>
+
+      <div class="pain">
+        <div class="pain-q">&ldquo;My advisor does not really understand federal benefits.&rdquo;</div>
+        <div class="pain-a">FERS, TSP, FEGLI, FEHB, VERA, WEP, GPO &mdash; most advisors have never seen these. <strong>We work with them every day.</strong></div>
+      </div>
+
+      <div class="pain">
+        <div class="pain-q">&ldquo;I know FEGLI gets expensive. I just do not know when to act.&rdquo;</div>
+        <div class="pain-a">After 65, Option B premiums can increase <strong>10&ndash;15 times.</strong> The window to switch closes fast.</div>
+      </div>
+
+      <div class="pain">
+        <div class="pain-q">&ldquo;Will my money actually last?&rdquo;</div>
+        <div class="pain-a">That depends on withdrawals, taxes, IRMAA, and Social Security timing. <strong>These are solvable problems.</strong></div>
+      </div>
+
+      <div class="flap-close">
+        If any of this sounds familiar, you are not behind.<br>
+        <strong>You just need someone who speaks federal.</strong>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACK COVER — outside-center -->
+  <div class="panel p-back">
+    <div class="stripe"></div>
+    <div class="back-in">
+
+      <div>
+        <div class="seal">
+          <div class="micro t">Est. 2009</div>
+          <div class="seal-name">Capital<br>Wealth</div>
+          <div class="micro b">Fiduciary</div>
+        </div>
+        <div class="about">
+          Mike Stevens founded Capital Wealth on one belief: <strong>the people who built this country deserve an advisor who works for them &mdash; not Wall Street.</strong>
+        </div>
+        <div class="rule-gold"></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>500+ federal employees</strong> served</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>1,000+ families</strong> guided to confident retirement</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>25+ years</strong> of fiduciary financial planning</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>No. 1 financial radio show</strong> in Utah &mdash; Retire Right Radio</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>Fiduciary</strong> &mdash; legally required to act in your interest</p></div>
+      </div>
+
+      <div>
+        <div class="nums">
+          <div class="num-block">
+            <div class="num-val">$142K</div>
+            <div class="num-lbl">Tax savings,<br>one client</div>
+          </div>
+          <div class="num-block">
+            <div class="num-val">$3,200</div>
+            <div class="num-lbl">Avg. FEGLI savings<br>per year</div>
+          </div>
+          <div class="num-block">
+            <div class="num-val">$780K</div>
+            <div class="num-lbl">Avg. TSP at<br>retirement</div>
+          </div>
+          <div class="num-block">
+            <div class="num-val">500+</div>
+            <div class="num-lbl">Federal employees<br>served</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>&ldquo;After 22 years at Hill Air Force Base, I thought I understood my benefits. In one meeting, I discovered I was on track to overpay $47,000 in taxes. We fixed it before I filed a single form.&rdquo;</p>
+          <div class="att">&mdash; Federal employee, Weber County, Utah</div>
+        </div>
+      </div>
+
+      <div class="back-foot">
+        <a href="https://www.capitalwealth.com">capitalwealth.com</a> &nbsp;&middot;&nbsp; 801.210.2800
+        <div class="back-fid">Fiduciary. Always.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FRONT COVER — outside-right -->
+  <div class="panel p-cover">
+    <div class="cover-img"></div>
+    <div class="cover-veil"></div>
+    <div class="stripe"></div>
+    <div class="cover-in">
+
+      <div>
+        <div class="cover-badge">For Federal Employees</div>
+        <img src="assets/cw-logo-white.png" alt="Capital Wealth" class="cover-logo">
+        <div class="cover-h1">You Served Your Country.<br>Now Let Your Benefits Serve You.</div>
+        <div class="cover-h2">Do you know what they are actually worth?</div>
+        <div class="cover-programs">FERS &middot; TSP &middot; FEGLI &middot; FEHB &middot; Social Security</div>
+        <div class="cover-tagline">Five benefits. One retirement. Zero room for guesswork.</div>
+      </div>
+
+      <div>
+        <div class="ev-card">
+          <div class="ev-lbl">Free Training Event</div>
+          <div class="ev-line"><strong>Thursday, April 9, 2026</strong></div>
+          <div class="ev-line">9:00 &ndash; 11:00 AM</div>
+          <div class="ev-line">Weber State &mdash; Davis Campus, Layton, UT</div>
+          <div class="sf182">SF-182 Eligible</div>
+        </div>
+        <div class="cover-foot">
+          <div class="qr-wrap">
+            <div class="qr-box"></div>
+            <div class="qr-lbl">Register Free</div>
+            <div class="qr-url">capitalwealth.com/federal</div>
+          </div>
+          <div class="cover-contact">
+            <div class="cover-web">capitalwealth.com</div>
+            <div class="cover-phone">801.210.2800</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     INSIDE SPREAD
+===================================================== -->
+<div class="proof-label">
+  <strong>Capital Wealth &mdash; Federal Benefits Trifold v9</strong>
+  <span>Inside Spread</span>
+</div>
+
+<div class="spread">
+
+  <!-- INSIDE LEFT — Programs + Process -->
+  <div class="panel p-plan">
+    <div class="stripe"></div>
+    <div class="plan-in">
+
+      <div class="plan-eyebrow">Every Benefit. One Clear Strategy.</div>
+      <div class="plan-title">We Specialize in Federal Retirement.</div>
+      <div class="plan-sub">Most advisors do not. We do &mdash; every day.</div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div class="step-lbl">Schedule</div>
+          <div class="step-d">Free 45-minute assessment. No obligation.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div class="step-lbl">Meet</div>
+          <div class="step-d">We review your benefits, goals, and questions.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div class="step-lbl">Plan</div>
+          <div class="step-d">Leave with a clear picture and a written summary.</div>
+        </div>
+      </div>
+
+      <div class="sec-break">
+        <div class="bar"></div>
+        <div class="tag">Programs We Cover</div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="prog-grid">
+        <div class="prog">
+          <h4>FERS Pension</h4>
+          <p>Annuity calculations, high-3 salary, survivor benefit elections, retirement date optimization.</p>
+          <div class="fed">LEO / ATC / Firefighter provisions</div>
+        </div>
+        <div class="prog">
+          <h4>TSP Planning</h4>
+          <p>C, S, I, F, G, and L Fund allocation. Traditional vs. Roth. Withdrawal and rollover strategy.</p>
+          <div class="fed">Withdrawal sequencing for tax efficiency</div>
+        </div>
+        <div class="prog">
+          <h4>FEGLI Insurance</h4>
+          <p>Post-retirement cost projections. Private insurance comparison. Most retirees are over-insured.</p>
+          <div class="fed">Option B transition planning before 65</div>
+        </div>
+        <div class="prog">
+          <h4>FEHB Health</h4>
+          <p>Keeping coverage in retirement. Medicare coordination. Plan selection and dental and vision.</p>
+          <div class="fed">5-year continuous enrollment rule</div>
+        </div>
+        <div class="prog">
+          <h4>Social Security</h4>
+          <p>FERS supplement bridge. WEP / GPO analysis. Spousal coordination and optimal timing.</p>
+          <div class="fed">Coordination with FERS pension income</div>
+        </div>
+        <div class="prog">
+          <h4>VERA / VSIP</h4>
+          <p>Early retirement and separation incentive analysis. Is the offer actually worth taking?</p>
+          <div class="fed">Impact on annuity and supplement</div>
+        </div>
+        <div class="prog">
+          <h4>Medicare + IRMAA</h4>
+          <p>Part B timing. IRMAA surcharge prevention. Up to $1,000+ per month in avoidable costs.</p>
+          <div class="fed">TSP timing to stay under thresholds</div>
+        </div>
+        <div class="prog">
+          <h4>Tax Strategy</h4>
+          <p>Roth conversions, withdrawal sequencing, bracket management, beneficiary review.</p>
+          <div class="fed">TSP + FEGLI beneficiaries override your will</div>
+        </div>
+      </div>
+
+      <div class="plan-foot">A portfolio is not a plan.</div>
+
+    </div>
+  </div>
+
+  <!-- INSIDE CENTER — Family Photo + Hero Compare -->
+  <div class="panel p-cmp">
+    <div class="stripe"></div>
+
+    <div class="cmp-photo">
+      <div class="cmp-photo-img"></div>
+      <div class="cmp-photo-fade"></div>
+      <div class="cmp-caption">
+        <span>This is what you are working toward.</span>
+      </div>
+    </div>
+
+    <div class="cmp-top">
+      <div class="cmp-stars">&#9733; &nbsp; &#9733; &nbsp; &#9733;</div>
+      <div class="cmp-title">With a Plan, You Retire with Confidence</div>
+      <div class="cmp-item"><div class="mark m-yes">&#10003;</div><span>FERS income verified <strong>to the dollar</strong></span></div>
+      <div class="cmp-item"><div class="mark m-yes">&#10003;</div><span>TSP positioned for <strong>retirement income</strong></span></div>
+      <div class="cmp-item"><div class="mark m-yes">&#10003;</div><span>FEGLI restructured &mdash; <strong>saving $3,200+ per year</strong></span></div>
+      <div class="cmp-item"><div class="mark m-yes">&#10003;</div><span>FEHB and Medicare coordinated &mdash; <strong>no surprises</strong></span></div>
+      <div class="cmp-item"><div class="mark m-yes">&#10003;</div><span>Retired <strong>on your own timeline</strong></span></div>
+      <div class="cmp-foot">Day one feels like you earned it. Because you did.</div>
+    </div>
+
+    <div class="cmp-bot">
+      <div class="cmp-title">Without a Plan, You Hope for the Best</div>
+      <div class="cmp-item"><div class="mark m-no">&#10007;</div><span>Annuity is <strong>$300/month less</strong> than assumed</span></div>
+      <div class="cmp-item"><div class="mark m-no">&#10007;</div><span>FEGLI premiums <strong>tripled</strong> &mdash; noticed too late</span></div>
+      <div class="cmp-item"><div class="mark m-no">&#10007;</div><span>Wrong FEHB plan &mdash; <strong>$500/month extra</strong></span></div>
+      <div class="cmp-item"><div class="mark m-no">&#10007;</div><span>IRMAA triggered &mdash; Medicare up <strong>$800/month</strong></span></div>
+      <div class="cmp-item"><div class="mark m-no">&#10007;</div><span>Filed Social Security too early &mdash; <strong>$100K+ less</strong></span></div>
+      <div class="cmp-foot">You spent 20+ years serving this country. You deserve better than &ldquo;I hope this works.&rdquo;</div>
+    </div>
+
+  </div>
+
+  <!-- INSIDE RIGHT — CTA -->
+  <div class="panel p-cta">
+    <div class="cta-img"></div>
+    <div class="cta-veil"></div>
+    <div class="stripe"></div>
+    <div class="cta-in">
+
+      <div>
+        <div class="cta-stars">&#9733; &nbsp; &#9733; &nbsp; &#9733; &nbsp; &#9733; &nbsp; &#9733;</div>
+        <div class="cta-title">Your Federal Retirement, Demystified</div>
+        <div class="cta-sub">Two ways to get started. Both are free.</div>
+      </div>
+
+      <div class="lead">
+        <div class="lead-badge">Free Download</div>
+        <div class="lead-title">The Federal Employee's Retirement Readiness Guide</div>
+        <div class="lead-desc">FERS, TSP, FEGLI, FEHB, Medicare &mdash; everything covered at the April 9 workshop, in a take-home guide you can read at your own pace.</div>
+        <div class="lead-qr"></div>
+        <div class="lead-url">capitalwealth.com/federal-guide</div>
+      </div>
+
+      <div>
+        <div class="assess-lbl">Or Get Personal Answers</div>
+        <div class="assess-title">Free Federal Benefits Assessment</div>
+        <div class="assess-sub">45 minutes &middot; Your numbers &middot; Written summary</div>
+        <ul class="covers">
+          <li><span class="arr">&rarr;</span>FERS annuity</li>
+          <li><span class="arr">&rarr;</span>TSP optimization</li>
+          <li><span class="arr">&rarr;</span>FEGLI analysis</li>
+          <li><span class="arr">&rarr;</span>FEHB + Medicare</li>
+          <li><span class="arr">&rarr;</span>Social Security timing</li>
+          <li><span class="arr">&rarr;</span>Tax withdrawal plan</li>
+          <li><span class="arr">&rarr;</span>VERA / VSIP review</li>
+          <li><span class="arr">&rarr;</span>WEP / GPO analysis</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="path">
+          <div class="path-lbl">Free Workshop</div>
+          <div class="path-val">April 9 &middot; Weber State, Layton</div>
+          <div class="path-det">9:00&ndash;11:00 AM &middot; SF-182 Eligible &middot; workshopsforretirement.com</div>
+        </div>
+        <div class="path">
+          <div class="path-lbl">Call Mike Directly</div>
+          <div class="path-val">801.210.2800</div>
+        </div>
+      </div>
+
+      <div class="scarcity">
+        <strong>Limited new families accepted each quarter.</strong><br>
+        If you are serious about getting this right &mdash; do not wait.
+      </div>
+
+      <div class="cta-bot">
+        <img src="assets/cw-logo-white.png" alt="Capital Wealth" class="cta-logo">
+        <div class="cta-fid">Fiduciary. Always.</div>
+        <div class="cta-legal">Investment advisory services offered through Capital Wealth. Michael Stevens, IAR. Registered investment advisor. Educational purposes only &mdash; not investment, tax, or legal advice.</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
