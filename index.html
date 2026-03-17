@@ -357,13 +357,28 @@
     .sec-break .bar { flex: 1; height: 1px; background: var(--lt-grey); }
     .sec-break .tag { font-size: 7.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
 
-    .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
-    .prog { background: var(--lt-grey); border-radius: 5px; padding: 7px 9px; border-top: 3px solid var(--blue); }
-    .prog h4 { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px; }
-    .prog p { font-size: 9px; color: var(--grey); line-height: 1.45; }
-    .prog .fed { font-size: 8px; color: var(--orange); font-style: italic; margin-top: 2px; }
+    /* Grid fills remaining height — no white space gap */
+    .prog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 6px;
+      flex: 1;       /* stretch to fill available vertical space */
+      min-height: 0; /* required for flex children to shrink */
+    }
+    .prog {
+      background: var(--lt-grey);
+      border-radius: 5px;
+      padding: 10px 12px;
+      border-top: 3px solid var(--blue);
+      display: flex;
+      flex-direction: column;
+    }
+    .prog h4 { font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
+    .prog p { font-size: 10.5px; color: var(--grey); line-height: 1.5; flex: 1; }
+    .prog .fed { font-size: 9px; color: var(--orange); font-style: italic; margin-top: 4px; }
 
-    .plan-foot { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--lt-grey); text-align: center; font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--grey); }
+    .plan-foot { padding-top: 10px; border-top: 1px solid var(--lt-grey); text-align: center; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--grey); flex-shrink: 0; }
 
     /* ── INSIDE CENTER — VILLAIN FIRST ── */
     .p-villain {
@@ -620,10 +635,10 @@
     .step-n         { font-size: 24px; }
     .step-lbl       { font-size: 9.5px; }
     .step-d         { font-size: 9px; line-height: 1.5; }
-    .prog h4        { font-size: 10.5px; }
-    .prog p         { font-size: 9.5px; line-height: 1.5; }
-    .prog .fed      { font-size: 8.5px; }
-    .plan-foot      { font-size: 12.5px; }
+    .prog h4        { font-size: 11px; }
+    .prog p         { font-size: 10.5px; line-height: 1.5; }
+    .prog .fed      { font-size: 9px; }
+    .plan-foot      { font-size: 13px; }
 
     /* Inside — villain */
     .villain-eyebrow { font-size: 10px; }
