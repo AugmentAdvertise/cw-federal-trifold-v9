@@ -109,12 +109,12 @@
     }
     .flap-eyebrow {
       font-family: var(--sans);
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--red);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .flap-headline {
       font-family: var(--serif);
@@ -184,9 +184,9 @@
     .seal-name { font-family: var(--sans); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); text-align: center; line-height: 1.6; }
     .about { font-size: 12px; color: #333; line-height: 1.75; text-align: center; margin-bottom: 10px; }
     .about strong { color: var(--blue); }
-    .stat { display: flex; gap: 11px; margin-bottom: 10px; align-items: flex-start; }
-    .stat-dash { font-size: 20px; color: var(--gold); line-height: 1.2; flex-shrink: 0; }
-    .stat p { font-size: 16px; color: #333; line-height: 1.6; }
+    .stat { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
+    .stat-dash { font-size: 24px; color: var(--gold); line-height: 1.2; flex-shrink: 0; }
+    .stat p { font-size: 20px; color: #333; line-height: 1.55; }
     .stat p strong { color: var(--blue); }
     .nums { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0; }
     .num-block { background: var(--white); border: 1px solid #e0dbd2; border-radius: 6px; padding: 12px 8px; text-align: center; }
@@ -364,8 +364,8 @@
     .prog-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      gap: 5px;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 8px;
       flex: 1;
       min-height: 0;
     }
@@ -554,10 +554,10 @@
     .success-stars { font-size: 9px; letter-spacing: 10px; color: var(--gold); margin-bottom: 6px; text-align: center; }
     .success-title {
       font-family: var(--serif);
-      font-size: 28px; font-weight: 500; color: var(--white);
-      line-height: 1.25; margin-bottom: 12px; text-align: center;
+      font-size: 32px; font-weight: 500; color: var(--white);
+      line-height: 1.25; margin-bottom: 14px; text-align: center;
     }
-    .success-item { display: flex; gap: 12px; margin-bottom: 8px; font-size: 16px; line-height: 1.5; align-items: flex-start; color: var(--white); }
+    .success-item { display: flex; gap: 14px; margin-bottom: 10px; font-size: 20px; line-height: 1.45; align-items: flex-start; color: var(--white); }
     .s-mark { flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%; background: rgba(197,165,90,0.25); color: var(--gold-lt); font-size: 7px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
 
     /* Gold divider */
@@ -576,12 +576,12 @@
     }
     .dl-eyebrow {
       font-family: var(--sans);
-      font-size: 15px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+      font-size: 17px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
       color: var(--gold); text-align: center;
     }
     .dl-title {
       font-family: var(--serif);
-      font-size: 26px; font-weight: 500; color: var(--white);
+      font-size: 28px; font-weight: 500; color: var(--white);
       text-align: center; line-height: 1.3;
     }
     /* QR + phone — side by side */
@@ -597,14 +597,14 @@
     }
     .dl-qr-img { width: 90px; height: 90px; border-radius: 5px; flex-shrink: 0; display: block; }
     .dl-action-text { flex: 1; }
-    .dl-action-label { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-    .dl-url { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 10px; display: block; }
-    .dl-phone-label { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-    .dl-phone-val { font-family: var(--sans); font-size: 24px; font-weight: 700; color: var(--white); }
+    .dl-action-label { font-family: var(--sans); font-size: 15px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+    .dl-url { font-family: var(--sans); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; display: block; }
+    .dl-phone-label { font-family: var(--sans); font-size: 15px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+    .dl-phone-val { font-family: var(--sans); font-size: 28px; font-weight: 700; color: var(--white); }
 
     .dl-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px; }
-    .dl-logo { height: 28px; width: auto; filter: brightness(0) invert(1); opacity: 0.4; margin-bottom: 4px; }
-    .dl-fid { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gold); }
+    .dl-logo { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.4; margin-bottom: 4px; }
+    .dl-fid { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--gold); }
 
     @media print {
       body { background: none; padding: 0; }
@@ -617,60 +617,60 @@
     ===================================================== */
 
     /* Outside — flap */
-    .flap-headline  { font-size: 34px; }
-    .flap-lead      { font-size: 17px; line-height: 1.7; }
-    .pain-q         { font-size: 19px; }
-    .pain-a         { font-size: 15px; line-height: 1.6; }
-    .flap-close     { font-size: 18px; line-height: 1.6; }
+    .flap-headline  { font-size: 38px; }
+    .flap-lead      { font-size: 20px; line-height: 1.7; }
+    .pain-q         { font-size: 24px; }
+    .pain-a         { font-size: 19px; line-height: 1.6; }
+    .flap-close     { font-size: 22px; line-height: 1.6; }
 
     /* Outside — back */
-    .about          { font-size: 18px; line-height: 1.75; }
-    .stat p         { font-size: 16px; line-height: 1.6; }
-    .num-val        { font-size: 44px; }
-    .num-lbl        { font-size: 12px; }
-    .testimonial p  { font-size: 16px; line-height: 1.7; }
-    .testimonial .att { font-size: 14px; }
-    .back-foot      { font-size: 14px; }
-    .back-fid       { font-size: 17px; }
+    .about          { font-size: 22px; line-height: 1.7; }
+    .stat p         { font-size: 20px; line-height: 1.55; }
+    .num-val        { font-size: 52px; }
+    .num-lbl        { font-size: 16px; }
+    .testimonial p  { font-size: 20px; line-height: 1.65; }
+    .testimonial .att { font-size: 17px; }
+    .back-foot      { font-size: 17px; }
+    .back-fid       { font-size: 20px; }
 
     /* Outside — cover */
-    .cover-badge    { font-size: 13px; padding: 7px 20px; }
-    .cover-logo     { height: 48px; }
-    .cover-h1       { font-size: 46px; }
-    .cover-h2       { font-size: 34px; }
-    .cover-prog-eyebrow { font-size: 12px; }
-    .cover-prog-name    { font-size: 18px; font-weight: 700; }
-    .cover-prog-desc    { font-size: 14px; line-height: 1.6; }
-    .ev-lbl         { font-size: 12px; }
-    .ev-line        { font-size: 15px; line-height: 2.1; }
-    .sf182          { font-size: 12px; }
-    .cover-phone    { font-size: 22px; }
-    .cover-web      { font-size: 13px; }
-    .qr-lbl         { font-size: 12px; }
-    .qr-url         { font-size: 12px; }
+    .cover-badge    { font-size: 15px; padding: 8px 22px; }
+    .cover-logo     { height: 52px; }
+    .cover-h1       { font-size: 52px; }
+    .cover-h2       { font-size: 38px; }
+    .cover-prog-eyebrow { font-size: 15px; }
+    .cover-prog-name    { font-size: 22px; font-weight: 700; }
+    .cover-prog-desc    { font-size: 18px; line-height: 1.6; }
+    .ev-lbl         { font-size: 15px; }
+    .ev-line        { font-size: 18px; line-height: 2.1; }
+    .sf182          { font-size: 15px; }
+    .cover-phone    { font-size: 28px; }
+    .cover-web      { font-size: 16px; }
+    .qr-lbl         { font-size: 15px; }
+    .qr-url         { font-size: 15px; }
 
     /* Inside — plan */
-    .plan-title     { font-size: 34px; }
-    .plan-sub       { font-size: 18px; }
+    .plan-title     { font-size: 38px; }
+    .plan-sub       { font-size: 22px; }
     .step-n         { font-size: 32px; }
     .step-lbl       { font-size: 13px; }
     .step-d         { font-size: 12px; line-height: 1.5; }
-    .prog h4        { font-size: 17px; }
-    .prog p         { font-size: 15px; line-height: 1.55; }
-    .prog .fed      { font-size: 14px; }
-    .plan-foot      { font-size: 19px; }
+    .prog h4        { font-size: 20px; }
+    .prog p         { font-size: 18px; line-height: 1.5; }
+    .prog .fed      { font-size: 16px; }
+    .plan-foot      { font-size: 22px; }
 
     /* Inside — villain */
-    .villain-eyebrow { font-size: 12px; }
-    .villain-title   { font-size: 28px; }
-    .villain-sub     { font-size: 15px; line-height: 1.5; }
-    .retire-label    { font-size: 10px; }
-    .retire-amount   { font-size: 28px; line-height: 1.2; }
-    .retire-desc     { font-size: 11px; line-height: 1.4; }
-    .compare-table th { font-size: 13px; padding: 8px 12px; }
-    .compare-table td { font-size: 14px; padding: 5px 12px; line-height: 1.45; }
-    .villain-stat     { font-size: 15px; padding: 14px 18px; }
-    .villain-stat strong { font-size: 38px; }
+    .villain-eyebrow { font-size: 16px; }
+    .villain-title   { font-size: 36px; }
+    .villain-sub     { font-size: 20px; line-height: 1.5; }
+    .retire-label    { font-size: 14px; }
+    .retire-amount   { font-size: 40px; line-height: 1.2; }
+    .retire-desc     { font-size: 15px; line-height: 1.4; }
+    .compare-table th { font-size: 16px; padding: 10px 14px; }
+    .compare-table td { font-size: 18px; padding: 8px 14px; line-height: 1.5; }
+    .villain-stat     { font-size: 20px; padding: 16px 20px; }
+    .villain-stat strong { font-size: 48px; }
 
     /* Inside — CTA panel — full bleed photo, no caption needed */
   </style>
@@ -695,19 +695,15 @@
       <div class="flap-headline">You Have Spent Decades Earning These Benefits.<br>Do You Know What They Are Actually Worth?</div>
       <div class="pain">
         <div class="pain-q">Not knowing your exact FERS annuity</div>
-        <div class="pain-a">Based on our client reviews, most federal employees are off by <strong>$200&ndash;400 per month.</strong> That is up to $4,800 per year planned around the wrong number.</div>
+        <div class="pain-a">Most federal employees are off by <strong>$200&ndash;400 per month.</strong> That is $4,800/year planned around the wrong number.</div>
       </div>
       <div class="pain">
-        <div class="pain-q">Working with an advisor who does not understand federal benefits</div>
-        <div class="pain-a">FERS, TSP, FEGLI, FEHB, VERA, WEP, GPO &mdash; these require specialized knowledge most general advisors simply do not have.</div>
+        <div class="pain-q">An advisor who does not understand federal benefits</div>
+        <div class="pain-a">FERS, TSP, FEGLI, FEHB, VERA, WEP, GPO &mdash; <strong>these require specialized knowledge</strong> most advisors do not have.</div>
       </div>
       <div class="pain">
         <div class="pain-q">Not knowing when to act on FEGLI</div>
-        <div class="pain-a">Option B (5&times; salary coverage): roughly <strong>$25/month at 55 &mdash; over $300/month at 65.</strong> That is $72,000 in premiums for coverage you could replace with a $2,400 term policy. The window to switch closes at 65 &mdash; and it does not reopen.</div>
-      </div>
-      <div class="pain">
-        <div class="pain-q">Wondering whether your money will actually last</div>
-        <div class="pain-a">The answer depends on withdrawal sequencing, tax bracket management, IRMAA thresholds, and Social Security timing. <strong>Every one of these is solvable with the right plan.</strong></div>
+        <div class="pain-a">Option B jumps from <strong>$25/month at 55 to over $300/month at 65.</strong> The window closes at 65 and does not reopen.</div>
       </div>
       <div class="flap-close">
         If any of this sounds familiar, you are not behind.<br>
@@ -724,10 +720,8 @@
         <div class="about" style="margin-top:8px;"><strong>Every federal employee who walks through our door has earned something valuable. Our job is to make sure they keep it.</strong></div>
         <div class="rule-gold"></div>
         <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>500+ federal employees</strong> served</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>1,000+ families</strong> guided to confident retirement</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>25+ years</strong> of fiduciary financial planning</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p>Host of <strong>Retire Right Radio</strong> &mdash; Utah financial planning</p></div>
-        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>Fiduciary</strong> &mdash; legally required to act in your interest</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p><strong>25+ years</strong> fiduciary financial planning</p></div>
+        <div class="stat"><span class="stat-dash">&mdash;</span><p>Host of <strong>Retire Right Radio</strong></p></div>
       </div>
       <div>
         <div class="nums">
@@ -785,16 +779,16 @@
         </div>
         <div class="cover-prog-item">
           <div class="cover-prog-name">SS + SRS</div>
-          <div class="cover-prog-desc">Retire before 62? You may qualify for SRS &mdash; a bridge payment worth $2,000+/month until Social Security begins. Most federal employees have never heard of it.</div>
+          <div class="cover-prog-desc">Retire before 62? SRS can bridge $2,000+/month until Social Security begins.</div>
         </div>
         <div class="cover-foot" style="border-top:none;padding-top:10px;display:block;">
           <div style="background:rgba(255,255,255,0.08);border:1.5px solid var(--gold);border-radius:8px;padding:12px;display:flex;align-items:center;gap:12px;width:100%;">
-            <img src="assets/qr-federal-guide.png" alt="Scan to download" style="width:80px;height:80px;border-radius:5px;flex-shrink:0;display:block;">
+            <img src="assets/qr-federal-guide.png" alt="Scan to download" style="width:90px;height:90px;border-radius:5px;flex-shrink:0;display:block;">
             <div style="flex:1;">
-              <div style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Scan to Download</div>
-              <div style="font-family:var(--sans);font-size:16px;font-weight:600;color:var(--white);margin-bottom:10px;">capitalwealth.com/federal-guide</div>
-              <div style="font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Call Us Directly</div>
-              <div style="font-family:var(--sans);font-size:24px;font-weight:700;color:var(--white);">801.210.2800</div>
+              <div style="font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;">Scan to Download</div>
+              <div style="font-family:var(--sans);font-size:20px;font-weight:600;color:var(--white);margin-bottom:12px;">capitalwealth.com/federal-guide</div>
+              <div style="font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;">Call Us Directly</div>
+              <div style="font-family:var(--sans);font-size:28px;font-weight:700;color:var(--white);">801.210.2800</div>
             </div>
           </div>
         </div>
@@ -868,14 +862,7 @@
             <td class="bad-col"><span class="x">&#10007;</span>SS filed too early &mdash; can mean $100K+ less lifetime</td>
             <td class="good-col"><span class="ck">&#10003;</span>Social Security timed for maximum income</td>
           </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>IRMAA triggered above $106K income &mdash; Medicare surcharge adds $70&ndash;$419/mo per person</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Withdrawals sequenced below threshold &mdash; IRMAA avoided before it hits</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>Retires at 61 &mdash; misses 1.1% multiplier &mdash; $3,000/year less pension for life</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Retirement date optimized &mdash; 1.1% multiplier captured &mdash; $60K+ lifetime gain</td>
-          </tr>
+
         </tbody>
       </table>
 
@@ -934,16 +921,7 @@
           <p>MRA, MRA+10, age 60, age 62 &mdash; every scenario modeled so you know your optimal retirement date.</p>
           <div class="fed">VERA / VSIP early retirement offers analyzed</div>
         </div>
-        <div class="prog">
-          <h4>Medicare + IRMAA</h4>
-          <p>Your Part B enrollment timed. Your IRMAA surcharges identified and avoided before they hit.</p>
-          <div class="fed">Your TSP withdrawal timed to stay under thresholds</div>
-        </div>
-        <div class="prog">
-          <h4>Tax + Estate Strategy</h4>
-          <p>Your Roth conversion window identified. Your withdrawal sequence built. Your bracket managed.</p>
-          <div class="fed">Your TSP + FEGLI beneficiaries audited &mdash; they can override your will</div>
-        </div>
+
       </div>
 
       <div class="plan-foot">Your benefits are worth six figures. Treat them that way.</div>
