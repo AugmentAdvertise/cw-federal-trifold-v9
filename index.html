@@ -512,10 +512,12 @@
       z-index: 0;
     }
     .cta-photo-img {
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 45%;
       background-image: url('assets/family-flag.jpg');
-      background-size: cover;
-      background-position: center 80%;  /* push family higher — minimize sky above */
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
     /* Gradient: photo visible top half → solid navy bottom half */
     .cta-photo-fade {
@@ -523,11 +525,10 @@
       background: linear-gradient(
         180deg,
         rgba(8,30,63,0.00) 0%,
-        rgba(8,30,63,0.03) 28%,
-        rgba(8,30,63,0.30) 42%,
-        rgba(8,30,63,0.75) 55%,
-        rgba(8,30,63,0.95) 65%,
-        rgba(8,30,63,1.00) 72%
+        rgba(8,30,63,0.00) 30%,
+        rgba(8,30,63,0.50) 40%,
+        rgba(8,30,63,0.90) 48%,
+        rgba(8,30,63,1.00) 52%
       );
     }
     .cta-photo-caption { display: none; }
