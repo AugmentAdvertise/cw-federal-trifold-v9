@@ -495,28 +495,25 @@
 
     /* ── INSIDE RIGHT — Family + Success + CTA ── */
     /* v10 fix: single unified navy background — no hard seam between sections */
-    /* ══ PANEL 4 — Full bleed hero image, content layered on top ══
-       Family photo fills the entire panel.
-       Strong gradient overlay — clear at top, opaque navy at bottom 55%.
-       Hero narrative lives in the overlay. No cropped heads. No dead space.
-    */
+    /* ══ PANEL 4 — Full bleed hero image, content layered on top ══ */
     .p-cta {
       position: relative;
       overflow: hidden;
       background: var(--blue-deep);
+      height: 8.5in;  /* explicit height so absolute children can fill it */
     }
 
-    /* Full-panel background image — show the full family, no cropping */
+    /* Full-panel background image */
     .cta-photo {
       position: absolute;
-      inset: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       z-index: 0;
     }
     .cta-photo-img {
-      position: absolute; inset: 0;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       background-image: url('assets/family-flag.jpg');
       background-size: cover;
-      background-position: center 45%;  /* center on the family, not the sky */
+      background-position: center 30%;  /* centered, family fills upper portion */
     }
     /* Gradient: photo visible top half → solid navy bottom half */
     .cta-photo-fade {
@@ -814,6 +811,73 @@
 
 <div class="spread">
 
+  <!-- INSIDE CENTER — VILLAIN FIRST then comparison -->
+  <div class="panel p-villain">
+    <div class="stripe"></div>
+    <div class="villain-in">
+
+      <div class="villain-eyebrow">Without a Plan</div>
+      <div class="villain-title">The Average Federal Employee Leaves Hundreds of Thousands Behind.</div>
+      <div class="villain-sub">Not from bad investments. From avoidable mistakes in five specific areas.</div>
+
+      <!-- Retirement amount comparison — headline visual -->
+      <div class="retire-compare">
+        <div class="retire-bad">
+          <div class="retire-label">Without a Plan</div>
+          <div class="retire-amount">$490K</div>
+          <div class="retire-desc">Average retirement savings for federal employees without coordinated planning</div>
+        </div>
+        <div class="retire-good">
+          <div class="retire-label">With a Plan</div>
+          <div class="retire-amount">$780K</div>
+          <div class="retire-desc">Average TSP balance for Capital Wealth federal clients at retirement</div>
+        </div>
+      </div>
+
+      <!-- Side-by-side comparison table -->
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="th-bad">Without a Plan</th>
+            <th class="th-good">With a Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>FERS annuity estimated &mdash; commonly off by $300/mo</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Annuity verified to the dollar</td>
+          </tr>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>TSP in default allocation &mdash; not reviewed in years</td>
+            <td class="good-col"><span class="ck">&#10003;</span>TSP optimized for retirement income</td>
+          </tr>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>FEGLI premiums spike after 65 &mdash; too late to switch</td>
+            <td class="good-col"><span class="ck">&#10003;</span>FEGLI restructured &mdash; thousands saved annually</td>
+          </tr>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>Wrong FEHB plan &mdash; hundreds per month extra</td>
+            <td class="good-col"><span class="ck">&#10003;</span>FEHB + Medicare coordinated, no surprises</td>
+          </tr>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>SS filed too early &mdash; can mean $100K+ less lifetime</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Social Security timed for maximum income</td>
+          </tr>
+          <tr>
+            <td class="bad-col"><span class="x">&#10007;</span>IRMAA triggered &mdash; Medicare up $560+/mo per person</td>
+            <td class="good-col"><span class="ck">&#10003;</span>Withdrawals sequenced, IRMAA avoided</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="villain-stat">
+        <strong>$142,000</strong>
+        The tax savings one Capital Wealth federal client captured with a coordinated withdrawal and Roth conversion strategy &mdash; money that would have gone to the IRS.
+      </div>
+
+    </div>
+  </div>
+
   <!-- INSIDE LEFT — "YOU" voice throughout -->
   <div class="panel p-plan">
     <div class="stripe"></div>
@@ -890,73 +954,6 @@
       </div>
 
       <div class="plan-foot">Your benefits are worth six figures. Treat them that way.</div>
-    </div>
-  </div>
-
-  <!-- INSIDE CENTER — VILLAIN FIRST then comparison -->
-  <div class="panel p-villain">
-    <div class="stripe"></div>
-    <div class="villain-in">
-
-      <div class="villain-eyebrow">Without a Plan</div>
-      <div class="villain-title">The Average Federal Employee Leaves Hundreds of Thousands Behind.</div>
-      <div class="villain-sub">Not from bad investments. From avoidable mistakes in five specific areas.</div>
-
-      <!-- Retirement amount comparison — headline visual -->
-      <div class="retire-compare">
-        <div class="retire-bad">
-          <div class="retire-label">Without a Plan</div>
-          <div class="retire-amount">$490K</div>
-          <div class="retire-desc">Average retirement savings for federal employees without coordinated planning</div>
-        </div>
-        <div class="retire-good">
-          <div class="retire-label">With a Plan</div>
-          <div class="retire-amount">$780K</div>
-          <div class="retire-desc">Average TSP balance for Capital Wealth federal clients at retirement</div>
-        </div>
-      </div>
-
-      <!-- Side-by-side comparison table -->
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th class="th-bad">Without a Plan</th>
-            <th class="th-good">With a Plan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>FERS annuity estimated &mdash; commonly off by $300/mo</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Annuity verified to the dollar</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>TSP in default allocation &mdash; not reviewed in years</td>
-            <td class="good-col"><span class="ck">&#10003;</span>TSP optimized for retirement income</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>FEGLI premiums spike after 65 &mdash; too late to switch</td>
-            <td class="good-col"><span class="ck">&#10003;</span>FEGLI restructured &mdash; thousands saved annually</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>Wrong FEHB plan &mdash; hundreds per month extra</td>
-            <td class="good-col"><span class="ck">&#10003;</span>FEHB + Medicare coordinated, no surprises</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>SS filed too early &mdash; can mean $100K+ less lifetime</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Social Security timed for maximum income</td>
-          </tr>
-          <tr>
-            <td class="bad-col"><span class="x">&#10007;</span>IRMAA triggered &mdash; Medicare up $560+/mo per person</td>
-            <td class="good-col"><span class="ck">&#10003;</span>Withdrawals sequenced, IRMAA avoided</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="villain-stat">
-        <strong>$142,000</strong>
-        The tax savings one Capital Wealth federal client captured with a coordinated withdrawal and Roth conversion strategy &mdash; money that would have gone to the IRS.
-      </div>
-
     </div>
   </div>
 
