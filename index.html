@@ -766,20 +766,26 @@
   </div>
 
   <!-- BACK COVER — outside-center (unchanged from v12) -->
-  <div class="panel p-back" style="background:var(--blue-deep);color:var(--white);">
+  <div class="panel p-back" style="background:var(--blue-deep);color:var(--white);position:relative;overflow:hidden;">
     <div class="stripe"></div>
-    <div style="height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:0;">
 
-      <!-- TOP ZONE: Authority statement + stats on deep blue -->
-      <div style="padding:32px 28px 24px;flex:1;display:flex;flex-direction:column;justify-content:center;">
-        <div style="font-family:var(--serif);font-size:38px;font-weight:500;color:var(--white);line-height:1.25;margin-bottom:24px;">You Earned<br>Something<br>Valuable.</div>
-        <div style="font-family:var(--sans);font-size:20px;color:rgba(255,255,255,0.7);margin-bottom:28px;line-height:1.5;">We make sure you keep it.</div>
+    <!-- HERO IMAGE — Utah State Capitol -->
+    <div style="position:absolute;top:0;left:0;right:0;height:50%;z-index:0;">
+      <img src="assets/utah-capitol.jpg" alt="Utah State Capitol" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,30,63,0.15) 0%, rgba(8,30,63,0.4) 50%, rgba(8,30,63,0.95) 80%, rgba(8,30,63,1) 100%);"></div>
+    </div>
 
-        <div style="border-top:1.5px solid var(--gold);padding-top:20px;">
-          <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px;">
-            <span style="font-family:var(--serif);font-size:44px;font-weight:500;color:var(--gold);line-height:1;">500+</span>
-            <span style="font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.75);">federal employees served</span>
-          </div>
+    <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:0;">
+
+      <!-- TOP: Authority statement over hero image -->
+      <div style="padding:32px 28px 0;flex:0 0 auto;">
+        <div style="font-family:var(--serif);font-size:38px;font-weight:500;color:var(--white);line-height:1.25;margin-bottom:10px;text-shadow:0 2px 12px rgba(0,0,0,0.4);">You Earned<br>Something<br>Valuable.</div>
+        <div style="font-family:var(--sans);font-size:20px;color:rgba(255,255,255,0.85);line-height:1.5;text-shadow:0 1px 6px rgba(0,0,0,0.3);">We make sure you keep it.</div>
+      </div>
+
+      <!-- MIDDLE: Stats + Testimonial -->
+      <div style="padding:24px 28px 0;flex:1;display:flex;flex-direction:column;justify-content:center;">
+        <div style="border-top:1.5px solid var(--gold);padding-top:20px;margin-bottom:24px;">
           <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:14px;">
             <span style="font-family:var(--serif);font-size:44px;font-weight:500;color:var(--gold);line-height:1;">25+</span>
             <span style="font-family:var(--sans);font-size:18px;color:rgba(255,255,255,0.75);">years fiduciary planning</span>
@@ -789,29 +795,18 @@
             <span style="font-family:var(--serif);font-size:28px;font-weight:500;font-style:italic;color:var(--gold);">Retire Right Radio</span>
           </div>
         </div>
-      </div>
 
-      <!-- MIDDLE: QR + CTA compact row -->
-      <div style="background:rgba(255,255,255,0.06);border-top:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);padding:18px 24px;display:flex;align-items:center;gap:16px;">
-        <img src="assets/qr-federal-guide.png" alt="Get your complimentary Federal Benefits Analysis" style="width:90px;height:90px;border-radius:6px;flex-shrink:0;">
-        <div style="flex:1;">
-          <div style="font-family:var(--sans);font-size:15px;font-weight:700;color:var(--white);margin-bottom:6px;">Get Your Complimentary Federal Benefits Analysis</div>
-          <div style="font-family:var(--sans);font-size:13px;color:var(--gold);margin-bottom:10px;">capitalwealth.com/federal-guide</div>
-          <div style="font-family:var(--sans);font-size:26px;font-weight:700;color:var(--white);">801.210.2800</div>
-        </div>
-      </div>
-
-      <!-- BOTTOM: Testimonial + Fiduciary anchor -->
-      <div style="padding:20px 28px 24px;">
-        <div style="border-left:4px solid var(--gold);padding-left:16px;margin-bottom:20px;">
+        <div style="border-left:4px solid var(--gold);padding-left:16px;">
           <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:rgba(255,255,255,0.85);line-height:1.6;margin:0 0 8px;">&ldquo;22 years at Hill AFB. One visit showed I was on track to overpay $47,000 in taxes. Fixed before I filed a single form.&rdquo;</p>
           <div style="font-family:var(--sans);font-size:14px;font-weight:600;color:var(--gold);">&mdash; Federal employee, Weber County, Utah</div>
         </div>
+      </div>
 
-        <div style="text-align:center;border-top:1px solid rgba(197,165,90,0.3);padding-top:16px;">
-          <img src="assets/cw-logo-white.png" alt="Capital Wealth" style="height:36px;width:auto;opacity:0.5;margin-bottom:8px;">
-          <div style="font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold);letter-spacing:1px;">Fiduciary. Always.</div>
-        </div>
+      <!-- BOTTOM: Logo + Fiduciary anchor -->
+      <div style="padding:20px 28px 24px;text-align:center;border-top:1px solid rgba(197,165,90,0.3);">
+        <img src="assets/cw-logo-white.png" alt="Capital Wealth" style="height:36px;width:auto;opacity:0.5;margin-bottom:8px;">
+        <div style="font-family:var(--serif);font-style:italic;font-size:28px;color:var(--gold);letter-spacing:1px;">Fiduciary. Always.</div>
+        <div style="font-family:var(--sans);font-size:16px;color:rgba(255,255,255,0.5);margin-top:8px;">capitalwealth.com &nbsp;&middot;&nbsp; 801.210.2800</div>
       </div>
 
     </div>
