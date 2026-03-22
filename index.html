@@ -370,11 +370,12 @@
       display: flex;
       flex-direction: column;
       min-height: 0;
+      overflow: visible;
     }
     .prog h4 { font-family: var(--sans); font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
-    .prog ul { font-size: 9.5px; color: var(--grey); line-height: 1.5; flex: 1; min-height: 0; overflow: hidden; list-style: none; padding: 0; margin: 0; }
-    .prog ul li { margin-bottom: 2px; padding-left: 14px; position: relative; }
-    .prog ul li::before { content: '•'; position: absolute; left: 2px; color: var(--blue); font-size: 14px; line-height: 1; top: 0; font-weight: 700; }
+    .prog ul { font-size: 9.5px; color: var(--grey); line-height: 1.5; flex: 1; min-height: 0; overflow: visible; list-style: none; padding: 0; margin: 0; }
+    .prog ul li { margin-bottom: 3px; padding-left: 12px; position: relative; }
+    .prog ul li::before { content: ''; position: absolute; left: 1px; top: 4px; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; }
     .prog p { font-size: 9.5px; color: var(--grey); line-height: 1.5; flex: 1; min-height: 0; overflow: hidden; }
     .prog .fed { font-size: 8px; color: var(--orange); font-style: italic; margin-top: 4px; flex-shrink: 0; }
 
@@ -692,8 +693,8 @@
     .prog h4        { font-size: 18px; }
     .prog p         { font-size: 17px; line-height: 1.35; }
     .prog ul        { font-size: 17px; line-height: 1.35; }
-    .prog ul li     { padding-left: 20px; }
-    .prog ul li::before { font-size: 22px; left: 2px; }
+    .prog ul li     { padding-left: 18px; margin-bottom: 4px; }
+    .prog ul li::before { width: 7px; height: 7px; top: 7px; left: 2px; }
     .prog .fed      { font-size: 15px; }
     .plan-foot      { font-size: 18px; }
 
